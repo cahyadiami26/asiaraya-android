@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HRIS Asia Raya</string>
+    <string name="nav_home">Beranda</string>
+    <string name="nav_attendance">Presensi</string>
+    <string name="nav_schedule">Jadwal</string>
+    <string name="nav_leave">Cuti</string>
+    <string name="nav_more">Lainnya</string>
+</resources>

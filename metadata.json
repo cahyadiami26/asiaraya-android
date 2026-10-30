@@ -1,0 +1,6 @@
+{
+  "name": "HRIS Asia Raya",
+  "description": "Aplikasi HRIS Mobile PT Asia Raya Group untuk presensi, cuti, lembur, klaim, jadwal, slip gaji, dan persetujuan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
