@@ -9,6 +9,7 @@ import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -81,10 +82,7 @@ class ApiClient(private val sessionStore: UserSessionStore) {
                     val serverUrl = sessionStore.getServerUrl()
                     val refreshRequest = Request.Builder()
                         .url("$serverUrl/api/v1/auth/refresh")
-                        .post(okhttp3.RequestBody.create(
-                            "application/json".toMediaType(),
-                            """{"refresh_token":"$refreshToken"}"""
-                        ))
+                        .post("""{"refresh_token":"$refreshToken"}""".toRequestBody("application/json".toMediaType()))
                         .build()
 
                     val client = OkHttpClient()

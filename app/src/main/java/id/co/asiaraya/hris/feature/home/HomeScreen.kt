@@ -7,6 +7,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.FactCheck
+import androidx.compose.material.icons.automirrored.filled.ReceiptLong
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -146,7 +148,7 @@ fun HomeScreen(
                             color = Ink
                         )
                     }
-                    Divider(
+                    VerticalDivider(
                         modifier = Modifier
                             .height(36.dp)
                             .width(1.dp),
@@ -202,7 +204,7 @@ fun HomeScreen(
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
-                                imageVector = Icons.Default.FactCheck,
+                                imageVector = Icons.AutoMirrored.Filled.FactCheck,
                                 contentDescription = null,
                                 tint = CardBg,
                                 modifier = Modifier.size(22.dp)
@@ -281,7 +283,7 @@ fun HomeScreen(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     ShortcutItem(
-                        icon = Icons.Default.ReceiptLong,
+                        icon = Icons.AutoMirrored.Filled.ReceiptLong,
                         label = "Slip Gaji",
                         onClick = { onNavigateRoute("payslip") }
                     )

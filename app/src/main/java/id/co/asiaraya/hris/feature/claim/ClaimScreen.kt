@@ -8,6 +8,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ReceiptLong
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -66,7 +68,7 @@ fun ClaimScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 IconButton(onClick = onBack) {
-                    Icon(Icons.Default.ArrowBack, contentDescription = "Kembali", tint = Ink)
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Kembali", tint = Ink)
                 }
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -114,7 +116,7 @@ fun ClaimScreen(
                 if (claims.isEmpty()) {
                     item {
                         EmptyState(
-                            icon = Icons.Default.ReceiptLong,
+                            icon = Icons.AutoMirrored.Filled.ReceiptLong,
                             title = "Belum Ada Pengajuan Klaim",
                             body = "Klaim biaya dinas, medis, dan transportasi dapat diajukan di sini.",
                             ctaText = "Buat Pengajuan Baru",

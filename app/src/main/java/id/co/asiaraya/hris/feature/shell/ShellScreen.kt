@@ -8,6 +8,9 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import id.co.asiaraya.hris.feature.tax.TaxSlipScreen
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.EventNote
+import androidx.compose.material.icons.automirrored.filled.FactCheck
+import androidx.compose.material.icons.automirrored.filled.ReceiptLong
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -202,7 +205,7 @@ fun ShellScreen(
                     NavigationBarItem(
                         selected = activeTab == 3,
                         onClick = { activeTab = 3 },
-                        icon = { Icon(Icons.Default.EventNote, contentDescription = "Cuti") },
+                        icon = { Icon(Icons.AutoMirrored.Filled.EventNote, contentDescription = "Cuti") },
                         label = { Text("Cuti") },
                         colors = NavigationBarItemDefaults.colors(
                             selectedIconColor = Teal700,
@@ -432,7 +435,7 @@ fun ShellScreen(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    MoreMenuItem(Icons.Default.ReceiptLong, "Slip Gaji", "Rincian take home pay & unduh PDF") {
+                    MoreMenuItem(Icons.AutoMirrored.Filled.ReceiptLong, "Slip Gaji", "Rincian take home pay & unduh PDF") {
                         showMoreSheet = false
                         currentSubRoute = "payslip"
                     }
@@ -459,7 +462,7 @@ fun ShellScreen(
 
                     if (me?.permissions?.canApprove == true) {
                         MoreMenuItem(
-                            Icons.Default.FactCheck,
+                            Icons.AutoMirrored.Filled.FactCheck,
                             "Kotak Persetujuan",
                             "Setujui/tolak cuti, lembur, tukar shift, klaim",
                             badgeText = "${approvals.size} baru"
@@ -469,7 +472,7 @@ fun ShellScreen(
                         }
                     }
 
-                    Divider(modifier = Modifier.padding(vertical = 8.dp), color = Line)
+                    HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp), color = Line)
 
                     MoreMenuItem(Icons.Default.Person, "Profil & Pengaturan", "Data akun, ubah server, dan info aplikasi") {
                         showMoreSheet = false
